@@ -542,8 +542,8 @@ MonoBehaviour:
   - name: IntroSound
     clip: {fileID: 8300000, guid: a71590a753585fc439ec4014529efffc, type: 3}
   sfxSounds: []
-  musicsource: {fileID: 0}
-  sfxsource: {fileID: 0}
+  musicsource: {fileID: 1124839201}
+  sfxsource: {fileID: 2099312463}
 --- !u!4 &1120703135
 Transform:
   m_ObjectHideFlags: 0
@@ -992,6 +992,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 293781253}
+  - {fileID: 1120703135}
   - {fileID: 208926241}
   - {fileID: 1995117338}
-  - {fileID: 1120703135}
