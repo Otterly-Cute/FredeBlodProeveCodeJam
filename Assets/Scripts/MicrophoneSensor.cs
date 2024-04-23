@@ -2,12 +2,31 @@ using UnityEngine;
 using UnityEngine.Android;
 using System.Collections;
 
-public class DecibelMeter : MonoBehaviour
+public class MicrophoneSensor : MonoBehaviour
 {
+    //https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
     private AudioClip recordedClip;
     private AudioSource audioSource;
     private bool isRecording = false;
 
+    //https://www.youtube.com/watch?v=dzD0qP8viLw
+
+    private AudioClip microphoneClip;
+
+    /*
+     * https://www.youtube.com/watch?v=dzD0qP8viLw
+     * void Start()
+     * {
+     * MicrophoneToAudioClip();
+     * 
+     * 
+     * }
+     * */
+
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Start()
     {
         // Check if a microphone is available
@@ -33,6 +52,9 @@ public class DecibelMeter : MonoBehaviour
         StartRecording();
     }
 
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// </summary>
     void RequestMicrophonePermission()
     {
         if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
@@ -41,6 +63,10 @@ public class DecibelMeter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// </summary>
+    /// <returns></returns>
     IEnumerator WaitForMicrophonePermission()
     {
         // Wait until the user grants or denies permission
@@ -50,7 +76,10 @@ public class DecibelMeter : MonoBehaviour
         }
     }
 
-    // Start recording audio (changed to public)
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// Start recording audio (changed to public)
+    /// </summary>
     public void StartRecording()
     {
         if (Microphone.IsRecording(null))
@@ -68,7 +97,10 @@ public class DecibelMeter : MonoBehaviour
         isRecording = true;
     }
 
-    // Stop recording audio
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// Stop recording audio
+    /// </summary>
     public void StopRecording()
     {
         if (Microphone.IsRecording(null))
@@ -97,8 +129,11 @@ public class DecibelMeter : MonoBehaviour
         }
     }
 
-
-    // Get the current decibel level and play the recorded audio
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// Get the current decibel level and play the recorded audio
+    /// </summary>
+    /// <returns></returns>
     public float GetDecibelLevel()
     {
         if (isRecording && recordedClip != null)
@@ -130,5 +165,15 @@ public class DecibelMeter : MonoBehaviour
         }
 
         return 0f; // Return 0 if not recording or no recorded audio
+    }
+
+    /// <summary>
+    /// https://www.youtube.com/watch?v=dzD0qP8viLw
+    /// </summary>
+    public void MicrophoneToAudioClip()
+    {
+        //get the first microphone in device list
+        string microphoneName = Microphone.devices[0];
+        microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
     }
 }
