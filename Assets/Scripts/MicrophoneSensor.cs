@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Android;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MicrophoneSensor : MonoBehaviour
 {
@@ -12,21 +13,13 @@ public class MicrophoneSensor : MonoBehaviour
     //https://www.youtube.com/watch?v=dzD0qP8viLw
 
     private AudioClip microphoneClip;
+    public int sampleWindow = 64;
 
-    /*
-     * https://www.youtube.com/watch?v=dzD0qP8viLw
-     * void Start()
-     * {
-     * MicrophoneToAudioClip();
-     * 
-     * 
-     * }
-     * */
 
-    /// <summary>
-    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
-    /// </summary>
-    /// <returns></returns>
+    public Slider slider;
+
+
+
     IEnumerator Start()
     {
         // Check if a microphone is available
@@ -49,8 +42,60 @@ public class MicrophoneSensor : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         // Start recording
-        StartRecording();
+        // StartRecording();
+
+        MicrophoneToAudioClip();
     }
+
+
+    /// <summary>
+    /// https://www.youtube.com/watch?v=dzD0qP8viLw
+    /// </summary>
+    public void MicrophoneToAudioClip()
+    {
+
+        int frequency = 44100; // Sample rate
+        int seconds = 10; // Maximum recording duration
+
+        microphoneClip = Microphone.Start(null, true, seconds, frequency);
+      
+    }
+
+   public float GetDecibelFromMicrophone()
+    {
+        return GetDecibelFromAudioClip(Microphone.GetPosition(null), microphoneClip);
+    }
+
+    public float GetDecibelFromAudioClip(int clipPosition, AudioClip clip)
+    {
+        int startPosition = clipPosition - sampleWindow;
+
+        if (startPosition < 0) //if startposition is negative we would get an error
+            return 0;
+
+        float[] waveData = new float[sampleWindow];
+        clip.GetData(waveData, startPosition);
+
+        //compute how loud it is
+        float totalDecibel = 0;
+
+        for (int i = 0; i < sampleWindow; i++)  //calculating the mean value (can be done other ways than using the mean)
+        {
+            totalDecibel += Mathf.Abs(waveData[1]);
+        }
+
+        return totalDecibel / sampleWindow;
+
+
+    }
+
+
+
+
+
+
+
+   
 
     /// <summary>
     /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
@@ -167,13 +212,8 @@ public class MicrophoneSensor : MonoBehaviour
         return 0f; // Return 0 if not recording or no recorded audio
     }
 
-    /// <summary>
-    /// https://www.youtube.com/watch?v=dzD0qP8viLw
-    /// </summary>
-    public void MicrophoneToAudioClip()
-    {
-        //get the first microphone in device list
-        string microphoneName = Microphone.devices[0];
-        microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
-    }
+
+
+
+
 }
