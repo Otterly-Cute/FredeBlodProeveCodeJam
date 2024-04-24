@@ -20,14 +20,14 @@ public class SceneManager : MonoBehaviour
     // dog er det bedst hvis vi bare direkte caller den næste scene med LoadScene()
     public void LoadNextScene() {
         _sceneIndex++;
-        
+
         if (_sceneIndex >= UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings) {
             Debug.LogWarning("No more scenes to load");
             _sceneIndex = 0;
             return;
         }
 
-        StartCoroutine(LoadSceneAsync(_sceneIndex + 1));
+        StartCoroutine(LoadSceneAsync(_sceneIndex));
     }
 
     // det der faktisk ændrer scenen - en af dem her skal vi call med mini game navnene når vi når dertil.
