@@ -16,13 +16,17 @@ public class BlowOMeter : MonoBehaviour
 
     void Start()
     {
-        FillUp();
+        //FillUp();
     }
 
 
     void Update()
     {
-       
+        if (microphoneScript.GetDecibelFromMicrophone() > minimumDecibel)
+        {
+            //SetSlider(countUp++);
+            slider.value = countUp++;
+        }
     }
 
     /// <summary>
@@ -31,16 +35,17 @@ public class BlowOMeter : MonoBehaviour
     public void FillUp()
     {
         int i = 0;
-        while (i <= 100)
+        while (i < 100)
         {
             if (microphoneScript.GetDecibelFromMicrophone()>minimumDecibel) 
             {
-                SetSlider(countUp++);
+                //SetSlider(countUp++);
+                slider.value = countUp++;
                 i++;
             }
         }
     }
 
-    public void SetSlider(float tmp)
+    public void SetSlider(int tmp)
     { slider.value = tmp; }
 }

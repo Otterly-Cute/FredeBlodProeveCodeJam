@@ -16,9 +16,6 @@ public class MicrophoneSensor : MonoBehaviour
     public int sampleWindow = 64;
 
 
-    public Slider slider;
-
-
 
     IEnumerator Start()
     {

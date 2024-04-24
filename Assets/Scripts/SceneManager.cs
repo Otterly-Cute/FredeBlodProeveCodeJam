@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SceneManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class SceneManager : MonoBehaviour
     private int _currentSceneIndex = 0;
     private int _nextSceneIndex = 0;
     
+    // public UnityEngine.UI.Text loadingText;
+
     // dont mind de lange parametrer, det er basically bare en måde at få fat i scenenavnet fra indexen.
     void Start()
     {
@@ -15,26 +18,47 @@ public class SceneManager : MonoBehaviour
     }
 
     // når den her bliver called så skifter den til næste scene baseret på den nuværende scenes index.
-    // virker også når vi er i mini games, da de bliver called seperat fra main scenes.
-    // desuden skifter den bare tilbage til scenen med index 0 når den bliver called ved sidste scene.
-    public void LoadNextMainScene() 
-    {
-        _nextSceneIndex = (_currentSceneIndex + 1) % UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
+    public void LoadNextScene() => StartCoroutine(LoadSceneAsync(_currentSceneIndex + 1));
+    // dog er det bedst hvis vi bare direkte caller den næste scene med LoadScene()
 
-        if (_nextSceneIndex == 0) {
-            Debug.LogWarning("No more scenes to load.");;
-            return;
+
+    // det der faktisk ændrer scenen - en af dem her skal vi call med mini game navnene når vi når dertil.
+    public void LoadScene(string sceneName) => StartCoroutine(LoadSceneAsync(sceneName));
+
+    public void LoadScene(int sceneIndex) => StartCoroutine(LoadSceneAsync(sceneIndex));
+
+    private IEnumerator LoadSceneAsync(string sceneName)
+    {
+        LoadLoadingScene();
+        yield return null;
+
+        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log("Loading progress:" + asyncLoad.progress);
+            yield return null;
         }
-        
-        _currentSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-        LoadScene(UnityEngine.SceneManagement.SceneManager.GetSceneByBuildIndex(_nextSceneIndex).name);
+
+        UnityEngine.SceneManagement.Scene LoadedScene = UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName);
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(this.gameObject, LoadedScene);
     }
 
-    // den der faktisk ændrer scenen - den her skal vi call med mini game navnene når vi når dertil.
-    public void LoadScene(string sceneName) 
+    private IEnumerator LoadSceneAsync(int sceneIndex)
     {
-        UnityEngine.SceneManagement.Scene sceneToLoad = UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(this.gameObject, sceneToLoad);
+        LoadLoadingScene();
+        yield return null;
+
+        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneIndex);
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log("Loading progress:" + asyncLoad.progress);
+            yield return null;
+        }
+
+        UnityEngine.SceneManagement.Scene LoadedScene = UnityEngine.SceneManagement.SceneManager.GetSceneByBuildIndex(sceneIndex);
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(this.gameObject, LoadedScene);
     }
+
+    private void LoadLoadingScene() =>
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LoadingScene");
 }
