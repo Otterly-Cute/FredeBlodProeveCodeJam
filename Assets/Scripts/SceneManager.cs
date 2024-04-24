@@ -9,6 +9,8 @@ public class SceneManager : MonoBehaviour
     private int _currentSceneIndex = 0;
     private int _nextSceneIndex = 0;
     
+    public UnityEngine.UI.Text loadingText;
+
     // dont mind de lange parametrer, det er basically bare en måde at få fat i scenenavnet fra indexen.
     void Start()
     {
@@ -44,6 +46,7 @@ public class SceneManager : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             Debug.Log("Loading progress:" + asyncLoad.progress);
+            loadingText.text = "Loading progress: " + (asyncLoad.progress * 100).ToString("0.00") + "%";
             yield return null;
         }
 
@@ -60,6 +63,7 @@ public class SceneManager : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             Debug.Log("Loading progress:" + asyncLoad.progress);
+            loadingText.text = "Loading progress: " + (asyncLoad.progress * 100).ToString("0.00") + "%";
             yield return null;
         }
 
@@ -67,5 +71,16 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(this.gameObject, LoadedScene);
     }
 
-    private void LoadLoadingScene() => UnityEngine.SceneManagement.SceneManager.LoadScene("LoadingScene");
+    private void LoadLoadingScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LoadingScene");
+        StartCoroutine(FindLoadingText());
+    }
+
+    private IEnumerator FindLoadingText()
+    {
+        yield return null; // Wait for one frame to ensure the loading scene is loaded
+
+        loadingText = GameObject.Find("LoadingText").GetComponent<UnityEngine.UI.Text>();
+    }
 }
