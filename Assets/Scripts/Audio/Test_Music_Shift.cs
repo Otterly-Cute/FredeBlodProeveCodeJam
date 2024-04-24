@@ -12,13 +12,17 @@ public class Test_Music_Shift : MonoBehaviour
     }
     public void front()
     {
+        soundManager_get.sfxsource.Stop();
         UnityEngine.SceneManagement.SceneManager.LoadScene(11);
         soundManager_get.Talk_2();
+        
     }
 
     public void Back()
     {
+        soundManager_get.sfxsource.Stop();
         UnityEngine.SceneManagement.SceneManager.LoadScene(10);
         soundManager_get.Talk_1();
+        
     }
 }
