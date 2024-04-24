@@ -14,4 +14,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gyroscope.unity
     guid: e929225c4aedcfe43a0d1cc618babb25
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Bloddraabe.unity
+    guid: 8b1a1eadc1d75a342b1cb9695b283999
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/FindeSpil.unity
+    guid: 1ecf5133431896b4eb035824a910351e
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Klodser.unity
+    guid: 96d0353491e0d4c4cb5cd42b91442fbb
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Kugleramme.unity
+    guid: 3ae3ca8639957b8489c1561b9f93b4a3
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/laegerum.unity
+    guid: 674d504430865e346be006c901199bd0
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Puslespil.unity
+    guid: e4bc74fd10ba7b94dae9d368fe6ea197
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Puste.unity
+    guid: f7c8a018924ef7445930680b79160bc3
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Slut.unity
+    guid: 7839be1558920de43941d28e1425e9f0
+  - enabled: 1
+    path: "Assets/Scenes/GameScenes/Ventev\xE6relse.unity"
+    guid: ec63665fb9902d541bb6a9e38a7c55b1
   m_configObjects: {}
