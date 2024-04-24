@@ -9,7 +9,7 @@ public class SceneManager : MonoBehaviour
     private int _currentSceneIndex = 0;
     private int _nextSceneIndex = 0;
     
-    public UnityEngine.UI.Text loadingText;
+    // public UnityEngine.UI.Text loadingText;
 
     // dont mind de lange parametrer, det er basically bare en måde at få fat i scenenavnet fra indexen.
     void Start()
@@ -18,19 +18,9 @@ public class SceneManager : MonoBehaviour
     }
 
     // når den her bliver called så skifter den til næste scene baseret på den nuværende scenes index.
-    // virker også når vi er i mini games, da de bliver called seperat fra main scenes.
-    public void LoadNextMainScene() 
-    {
-        _nextSceneIndex = (_currentSceneIndex + 1) % UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
+    public void LoadNextScene() => StartCoroutine(LoadSceneAsync(_currentSceneIndex + 1));
+    // dog er det bedst hvis vi bare direkte caller den næste scene med LoadScene()
 
-        if (_nextSceneIndex == 0) {
-            Debug.LogWarning("No more scenes to load.");;
-            return;
-        }
-        
-        _currentSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-        LoadScene(UnityEngine.SceneManagement.SceneManager.GetSceneByBuildIndex(_nextSceneIndex).name);
-    }
 
     // det der faktisk ændrer scenen - en af dem her skal vi call med mini game navnene når vi når dertil.
     public void LoadScene(string sceneName) => StartCoroutine(LoadSceneAsync(sceneName));
@@ -46,7 +36,6 @@ public class SceneManager : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             Debug.Log("Loading progress:" + asyncLoad.progress);
-            loadingText.text = "Loading progress: " + (asyncLoad.progress * 100).ToString("0.00") + "%";
             yield return null;
         }
 
@@ -63,7 +52,6 @@ public class SceneManager : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             Debug.Log("Loading progress:" + asyncLoad.progress);
-            loadingText.text = "Loading progress: " + (asyncLoad.progress * 100).ToString("0.00") + "%";
             yield return null;
         }
 
@@ -71,16 +59,6 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(this.gameObject, LoadedScene);
     }
 
-    private void LoadLoadingScene()
-    {
+    private void LoadLoadingScene() =>
         UnityEngine.SceneManagement.SceneManager.LoadScene("LoadingScene");
-        StartCoroutine(FindLoadingText());
-    }
-
-    private IEnumerator FindLoadingText()
-    {
-        yield return null; // Wait for one frame to ensure the loading scene is loaded
-
-        loadingText = GameObject.Find("LoadingText").GetComponent<UnityEngine.UI.Text>();
-    }
 }
