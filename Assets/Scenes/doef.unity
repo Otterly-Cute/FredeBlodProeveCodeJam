@@ -133,11 +133,10 @@ GameObject:
   m_Component:
   - component: {fileID: 173680773}
   - component: {fileID: 173680772}
-  - component: {fileID: 173680771}
   - component: {fileID: 173680770}
   m_Layer: 0
   m_Name: Rufus_Kim_Possible
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,18 +186,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 3.12}
   m_EdgeRadius: 0
---- !u!114 &173680771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173680769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426c2d5c5f324704e8638abd47082093, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &173680772
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -412,11 +399,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1667031629}
   - component: {fileID: 1667031628}
-  - component: {fileID: 1667031627}
   - component: {fileID: 1667031626}
   m_Layer: 0
   m_Name: pizza
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -466,18 +452,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.84, y: 3.15}
   m_EdgeRadius: 0
---- !u!114 &1667031627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667031625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426c2d5c5f324704e8638abd47082093, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1667031628
 SpriteRenderer:
   m_ObjectHideFlags: 0
