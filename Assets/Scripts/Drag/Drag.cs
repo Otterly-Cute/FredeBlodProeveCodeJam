@@ -66,4 +66,6 @@ public class Drag : MonoBehaviour
         isDragActive = false;
         draggableObject = null; // Reset the draggable object
     }
+
+
 }
