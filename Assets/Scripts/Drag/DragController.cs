@@ -8,7 +8,7 @@ public class DragController : MonoBehaviour
     private bool isDragActive = false;
     private Vector2 screenPosition;
     private Vector3 worldPosition;
-    private Draggable lastDragged;
+    private GameObject lastDragged;
     
     void Awake()
     {   
@@ -53,10 +53,10 @@ public class DragController : MonoBehaviour
            RaycastHit2D hit = Physics2D.Raycast(worldPosition,Vector2.zero); 
            if (hit.collider != null)
            {
-                Draggable draggable = hit.transform.gameObject.GetComponent<Draggable>();
-                if (draggable != null)
+                
+                if(hit.transform.gameObject.CompareTag("Draggable"))
                 {
-                 lastDragged = draggable;
+                 lastDragged = hit.transform.gameObject;
                  InitDrag();
                 }
            }
