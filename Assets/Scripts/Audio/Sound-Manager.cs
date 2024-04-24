@@ -26,12 +26,12 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        PlayMusic("IntroSound");
+        playSFX("AudioClip_1_Intro1");
     }
 
     public void levelmusic()
     {
-        PlayMusic("GameSound");
+       // PlayMusic("GameSound");
     }
 
     public void PlayMusic(string name)
