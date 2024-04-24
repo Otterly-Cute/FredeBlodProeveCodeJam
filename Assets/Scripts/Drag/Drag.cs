@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    private bool isDragActive = false;
-    private Vector2 screenPosition;
-    private Vector3 worldPosition;
-    private GameObject draggableObject; // Track the currently draggable object
+    protected bool isDragActive = false;
+    protected Vector2 screenPosition;
+    protected Vector3 worldPosition;
+    protected GameObject draggableObject; // Track the currently draggable object
 
-    void Update()
+   protected void Update()
     {
         if (isDragActive && (Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)))
         {
@@ -40,30 +40,30 @@ public class Drag : MonoBehaviour
         else
         {
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
-            if (hit.collider != null)
+            if (hit.collider != null && hit.transform.gameObject.CompareTag("Draggable"))
             {
-                if (hit.transform.gameObject.CompareTag("Draggable"))
-                {
-                    draggableObject = hit.transform.gameObject; // Set the draggable object
-                    InitDrag();
-                }
+                draggableObject = hit.transform.gameObject; // Set the draggable object
+                InitDrag();
+                
             }
         }
     }
 
-    void InitDrag()
+   protected void InitDrag()
     {
         isDragActive = true;
     }
 
-    void DragObject()
+    protected void DragObject()
     {
         draggableObject.transform.position = new Vector2(worldPosition.x, worldPosition.y);
     }
 
-    void DropObject()
+    protected void DropObject()
     {
         isDragActive = false;
         draggableObject = null; // Reset the draggable object
     }
+
+
 }

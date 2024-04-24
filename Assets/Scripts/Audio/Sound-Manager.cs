@@ -10,6 +10,8 @@ public class SoundManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicsource, sfxsource;
 
+
+    
     private void Awake()
     {
         if (Instance == null)
@@ -24,15 +26,19 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    void Start()
+    public void Talk_1()
     {
         playSFX("AudioClip_1_Intro1");
+
     }
 
-    public void levelmusic()
+
+    public void Talk_2()
     {
-       // PlayMusic("GameSound");
+        playSFX("AudioClip_2_Intro2");
+
     }
+
 
     public void PlayMusic(string name)
     {
@@ -63,5 +69,4 @@ public class SoundManager : MonoBehaviour
             sfxsource.PlayOneShot(s.clip);
         }
     }
-
 }

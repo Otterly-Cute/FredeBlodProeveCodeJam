@@ -6,8 +6,7 @@ public class SceneManager : MonoBehaviour
 
     // PREFACE: scriptet assumer at den første scene er den med index 0 (main menu formentligt) -
     // hvis det er ikke, så skal vi lige ændre nogle ting.
-    private int _currentSceneIndex = 0;
-    private int _nextSceneIndex = 0;
+    private int _sceneIndex = 0;
     
     // public UnityEngine.UI.Text loadingText;
 
@@ -18,9 +17,18 @@ public class SceneManager : MonoBehaviour
     }
 
     // når den her bliver called så skifter den til næste scene baseret på den nuværende scenes index.
-    public void LoadNextScene() => StartCoroutine(LoadSceneAsync(_currentSceneIndex + 1));
     // dog er det bedst hvis vi bare direkte caller den næste scene med LoadScene()
+    public void LoadNextScene() {
+        _sceneIndex++;
 
+        if (_sceneIndex >= UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings) {
+            Debug.LogWarning("No more scenes to load");
+            _sceneIndex = 0;
+            return;
+        }
+
+        StartCoroutine(LoadSceneAsync(_sceneIndex));
+    }
 
     // det der faktisk ændrer scenen - en af dem her skal vi call med mini game navnene når vi når dertil.
     public void LoadScene(string sceneName) => StartCoroutine(LoadSceneAsync(sceneName));
