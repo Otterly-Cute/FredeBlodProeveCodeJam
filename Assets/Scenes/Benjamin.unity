@@ -586,7 +586,61 @@ MonoBehaviour:
   musicSounds:
   - name: IntroSound
     clip: {fileID: 8300000, guid: a71590a753585fc439ec4014529efffc, type: 3}
-  sfxSounds: []
+  sfxSounds:
+  - name: AudioClip_1_Intro1
+    clip: {fileID: 8300000, guid: 27708e0cc0e9c2041b90d0f934d56b77, type: 3}
+  - name: AudioClip_2_Intro2
+    clip: {fileID: 8300000, guid: 9153182843bbde44a992e53e3ff6fa55, type: 3}
+  - name: AudioClip_3_Intro3
+    clip: {fileID: 8300000, guid: 9edfbbbec2a50cf41b0255b5c739a450, type: 3}
+  - name: AudioClip_4_IntroEnd_transPlay
+    clip: {fileID: 8300000, guid: ee7e963dd33d37d4b93d259ecf82a7b2, type: 3}
+  - name: AudioClip_5_DoctorRoom1
+    clip: {fileID: 8300000, guid: 8872799f11301f0439f2809837a6dabc, type: 3}
+  - name: AudioClip_6_DoctorRoom2
+    clip: {fileID: 8300000, guid: 8c43c950d96bbfb43abc4f7c045cc759, type: 3}
+  - name: AudioClip_7_DoctorRoom3
+    clip: {fileID: 8300000, guid: c667eff35134df143bbc9721dbb19464, type: 3}
+  - name: AudioClip_8_DoctorRoom4
+    clip: {fileID: 8300000, guid: 8a03388f263e94943933d8093d6257c8, type: 3}
+  - name: AudioClip_9_transplaster
+    clip: {fileID: 8300000, guid: 007f450b874310248be8ba3394c053bc, type: 3}
+  - name: AudioClip_10_PlasterOFF
+    clip: {fileID: 8300000, guid: 89eca7c1d8a290d49a3111a4c29511c1, type: 3}
+  - name: AudioClip_11_FindElastik
+    clip: {fileID: 8300000, guid: fbcb7085873159543a211f35ce66d868, type: 3}
+  - name: AudioClip_12_SetElastik1
+    clip: {fileID: 8300000, guid: 710dbe64b6e3a234896e5aa7bc2d449e, type: 3}
+  - name: AudioClip_13_SetElastik2
+    clip: {fileID: 8300000, guid: 90858655854baeb45a92ea41449c0447, type: 3}
+  - name: AudioClip_14_FindBloodvein
+    clip: {fileID: 8300000, guid: 0772378818708ac45bede65c550d6fc6, type: 3}
+  - name: AudioClip_15_sanitizerOnArm
+    clip: {fileID: 8300000, guid: 89020fab5a1ca3142be0bc229c305d0f, type: 3}
+  - name: AudioClip_16_BlowOnSanitize
+    clip: {fileID: 8300000, guid: 5df5b7db6df0f6a4aac304cb1311fa6f, type: 3}
+  - name: AudioClip_17_BeforeBloodsample1
+    clip: {fileID: 8300000, guid: 0eff078e9a6226d4bb399731532cda58, type: 3}
+  - name: AudioClip_18_BeforeBloodsample2
+    clip: {fileID: 8300000, guid: 87abfbfb3f54c174eb2cb1a9457aaf14, type: 3}
+  - name: AudioClip_19_BeforeBloodsample3
+    clip: {fileID: 8300000, guid: e702eaabe265fa24495d0a09163a89ed, type: 3}
+  - name: AudioClip_20_NeedleToArm
+    clip: {fileID: 8300000, guid: 0d0bb118b30ffd7439249473589ad09c, type: 3}
+  - name: AudioClip_21_NeedleInArm
+    clip: {fileID: 8300000, guid: 8b23488acc02257429816c8d3805e451, type: 3}
+  - name: AudioClip_22_Bloodmazebefore+after
+    clip: {fileID: 8300000, guid: b56f72cce4d2e6e419d592e5f341e3f2, type: 3}
+  - name: AudioClip_23_Choosebandaid
+    clip: {fileID: 8300000, guid: 251419bd057730541861a188af6638cc, type: 3}
+  - name: AudioClip_24_SetBandaid
+    clip: {fileID: 8300000, guid: c69c5fdc91da14a44a2272814ed85b9b, type: 3}
+  - name: AudioClip_25_TakeelastikOFF
+    clip: {fileID: 8300000, guid: c007bd50b5c5a6445ad77c8997c2ed89, type: 3}
+  - name: AudioClip_26_Ending1
+    clip: {fileID: 8300000, guid: 42c270d77eaeb9e4bb5ed13d6b4c79f1, type: 3}
+  - name: AudioClip_27_Ending2
+    clip: {fileID: 8300000, guid: 2ff3bdcdeadd38c4aba1262866382d60, type: 3}
   musicsource: {fileID: 1124839201}
   sfxsource: {fileID: 2099312463}
 --- !u!4 &1120703135
