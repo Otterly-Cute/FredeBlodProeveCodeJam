@@ -10,6 +10,8 @@ public class SoundManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicsource, sfxsource;
 
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -22,16 +24,6 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
-
-    void Start()
-    {
-        PlayMusic("IntroSound");
-    }
-
-    public void levelmusic()
-    {
-        PlayMusic("GameSound");
     }
 
     public void PlayMusic(string name)
@@ -64,4 +56,14 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void Talk_1()
+    {
+        playSFX("AudioClip_1_Intro1");
+    }
+
+
+    public void Talk_2()
+    {
+        playSFX("AudioClip_2_Intro2");
+    }
 }
