@@ -10,16 +10,9 @@ public class Animations_end : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        Starter = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Doctor_room>();
+        StartCoroutine(Delay());
     }
 
-    private void Update()
-    {
-        if (Starter.Starting == true)
-        {
-            StartCoroutine(Delay());
-        }
-    }
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(3f);
@@ -53,6 +46,5 @@ public class Animations_end : MonoBehaviour
     private void Shifter_3()
     {
         animator.Play("Scene_3TransEnd");
-        //StartCoroutine(Delay_3());
     }
 }
