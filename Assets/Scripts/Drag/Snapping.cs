@@ -10,6 +10,8 @@ public class Snapping : Drag
     protected Transform snapPoint;
     protected bool isSnapped;
 
+    public ParticleSystem Succes;
+
     private void Start()
     {
         // Find the SnapManager in the scene
@@ -40,6 +42,12 @@ public class Snapping : Drag
             {
                 isSnapped = false;
             }
+        }
+
+        if (isSnapped && !hasTriggeredVFX)
+        {
+            playVFX();
+            hasTriggeredVFX = true;
         }
     }
 }
