@@ -1839,14 +1839,16 @@ MonoBehaviour:
   sfxSounds:
   - name: AudioClip_1_Intro1
     clip: {fileID: 8300000, guid: df37fe6ce2c254e4bb0e0b00bed63fc8, type: 3}
-  - name: AudioClip_2_Intro2
+  - name: AudioClip_2_Doctor
     clip: {fileID: 8300000, guid: 18fab3fc40138cb419b98a3e52274be0, type: 3}
-  - name: AudioClip_3_Intro3
-    clip: {fileID: 8300000, guid: 9edfbbbec2a50cf41b0255b5c739a450, type: 3}
-  - name: AudioClip_4_IntroEnd_transPlay
-    clip: {fileID: 8300000, guid: ee7e963dd33d37d4b93d259ecf82a7b2, type: 3}
+  - name: AudioClip_3_PlasterOff
+    clip: {fileID: 8300000, guid: 89eca7c1d8a290d49a3111a4c29511c1, type: 3}
+  - name: AudioClip_4_ElastikFind
+    clip: {fileID: 8300000, guid: fbcb7085873159543a211f35ce66d868, type: 3}
   - name: AudioClip_5_DoctorRoom1
     clip: {fileID: 8300000, guid: 8872799f11301f0439f2809837a6dabc, type: 3}
+  - name: AudioClip_5_Elastik_found
+    clip: {fileID: 8300000, guid: 710dbe64b6e3a234896e5aa7bc2d449e, type: 3}
   musicsource: {fileID: 2127020816}
   sfxsource: {fileID: 1585422318}
 --- !u!4 &1796259000
