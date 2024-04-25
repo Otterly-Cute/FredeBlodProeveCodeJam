@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmMiniGame : MonoBehaviour, ITriggerable
+public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 {
     public GameObject Band;
     public GameObject LooseBand;
+    public GameObject BandButton;
     public GameObject TightBand;
 
     public GameObject BloodVein;
@@ -14,18 +15,27 @@ public class ArmMiniGame : MonoBehaviour, ITriggerable
     {
         switch (gameObject.name) {
                 case "Kasse_Band":
-                    BandEvent();
+                    BandEventOne();
                     break;
-                case "Sprit":
-                    Debug.Log("Sprit");
+                case "Band_Loose":
+                BandEventTwo();
                     break;
         }
     }
 
-    private void BandEvent()
+    private void BandEventOne()
     {
         Band.SetActive(false);
         LooseBand.SetActive(true);
+        BandButton.SetActive(true);
+    }
+
+    private void BandEventTwo()
+    {
+        LooseBand.SetActive(false);
+        BandButton.SetActive(false);
+        TightBand.SetActive(true);
         BloodVein.SetActive(true);
+        Debug.Log("BandEventTwo has been triggered!");
     }
 }
