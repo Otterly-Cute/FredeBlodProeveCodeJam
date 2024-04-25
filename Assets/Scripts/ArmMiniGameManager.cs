@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 {
+    public SoundManager soundManager;
     public GameObject BandSnapPoint;
     public GameObject SpritSnapPoint;
     public GameObject NeedleSnapPoint;
@@ -21,6 +23,27 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
     public GameObject arrowOne;
     // public GameObject arrowTwo;
     
+    public void Start()
+    {
+        soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
+        if (SceneManager.GetActiveScene().name == "ArmCloseUp1") {
+            soundManager.playSFX("AudioClip_5_Elastik_arm");
+            return;
+        }
+
+        if (SceneManager.GetActiveScene().name == "ArmCloseUp 2") {
+            soundManager.playSFX("detherernal");
+            StartCoroutine(AudioOne());
+            return;
+        }
+    }
+
+    public IEnumerator AudioOne()
+    {
+        yield return new WaitForSeconds(4.25f);
+        soundManager.playSFX("nal2");
+    }
+
     public void TriggerEvent(GameObject gameObject)
     {
         switch (gameObject.name) {
@@ -58,7 +81,8 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 
     private IEnumerator DelayedArmEventFour()
     {
-        yield return new WaitForSeconds(1);
+        soundManager.playSFX("nofeel");
+        yield return new WaitForSeconds(4);
         arrowOne.SetActive(true); // husk at call eventfour 
     }
 
@@ -72,6 +96,7 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 
     private void ArmEventTwo()
     {
+        soundManager.playSFX("sprit");
         BandButton.SetActive(false);
         LooseBand.SetActive(false);
         TightBand.SetActive(true);
