@@ -10,9 +10,17 @@ public class GyroMove : MonoBehaviour
     public float dirX;
     public float dirY;
     public GameObject button;
+    private SoundManager soundManager;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
+        soundManager.playSFX("");
     }
 
     // Update is called once per frame

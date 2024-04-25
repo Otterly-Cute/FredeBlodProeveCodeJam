@@ -15,6 +15,13 @@ public class BlowOMeter : MonoBehaviour
     public int countUp = 0;
     public float minimumDecibel = 0.5f;
 
+    private SoundManager soundManager;
+    public void Start()
+    {
+        soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
+        soundManager.playSFX("puste");
+    }
+
     void Update()
     {
         if (microphoneScript.GetDecibelFromMicrophone() > minimumDecibel)
