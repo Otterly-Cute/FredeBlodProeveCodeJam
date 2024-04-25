@@ -10,8 +10,6 @@ public class SoundManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicsource, sfxsource;
     
-
-
     private void Awake()
     {
         if (Instance == null)
@@ -23,46 +21,7 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
-
-    public void Talk_Intro()
-    {
-        playSFX("AudioClip_1_Intro1");
-
-    }
-
-    public void Talk_Game1()
-    {
-        playSFX("AudioClip_2_Doctor");
-
-    }
-
-    public void Plaster_off()
-    {
-        playSFX("AudioClip_3_PlasterOff");
-
-    }
-
-    public void Find_elastik()
-    {
-        playSFX("AudioClip_4_ElastikFind");
-
-    }
-
-    public void Click_elastik()
-    {
-        playSFX("AudioClip_5_Elastik_found");
-
-    }
-
-    public void Ending()
-    {
-        playSFX("AudioClip_10_Ending");
-
-    }
-
-
 
     public void PlayMusic(string name)
     {

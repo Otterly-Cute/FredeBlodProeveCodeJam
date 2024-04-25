@@ -20,7 +20,7 @@ public class Test_Music_Shift : MonoBehaviour
     {
         start = true;
         StartCoroutine(storyDelay());
-        soundManager_get.Talk_Intro();
+        soundManager_get.playSFX("AudioClip_1_Intro1");
         Destroy(Button_start);
     }
 
@@ -55,24 +55,24 @@ public class Test_Music_Shift : MonoBehaviour
     public void Doctor_Scene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
-        soundManager_get.Talk_Game1();
+        soundManager_get.playSFX("AudioClip_2_Doctor");
     }
 
     public void Trylleplaster_off()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(6);
-        soundManager_get.Plaster_off();
+        soundManager_get.playSFX("AudioClip_3_PlasterOff");
     }
 
     public void Find_Object_Scene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(8);
-        soundManager_get.Find_elastik();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+        soundManager_get.playSFX("AudioClip_4_ElastikFind");
     }
 
     public void Elastik_found()
     {
-        soundManager_get.Click_elastik();
+        soundManager_get.playSFX("AudioClip_5_Elastik_found");
         StartCoroutine(storyDelay_Arm());
     }
 
