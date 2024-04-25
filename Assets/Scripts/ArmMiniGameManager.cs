@@ -88,6 +88,7 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 
     private void ArmEventOne()
     {
+        soundManager.playSFX("elastik2");
         Band.SetActive(false);
         LooseBand.SetActive(true);
         BandButton.SetActive(true);

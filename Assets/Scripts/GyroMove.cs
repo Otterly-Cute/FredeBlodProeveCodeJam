@@ -20,7 +20,7 @@ public class GyroMove : MonoBehaviour
     void Start()
     {
         soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
-        soundManager.playSFX("blod");
+        soundManager.playSFX("blod1");
     }
 
     // Update is called once per frame
