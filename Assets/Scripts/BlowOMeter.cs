@@ -32,6 +32,7 @@ public class BlowOMeter : MonoBehaviour
         if (slider.value == 20)
         {
             button.SetActive(true);
+            soundManager.playSFX("puste2");
         }
     }
 }
