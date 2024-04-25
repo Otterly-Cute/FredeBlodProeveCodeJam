@@ -12,7 +12,7 @@ public class SnapEvent : Snapping
     {
         triggerable = GameManager.GetComponent<ITriggerable>();
         if (triggerable == null) {
-            Debug.LogError("No Eventmanager found in the scene");
+            Debug.LogWarning("No Eventmanager found in the scene");
         }
     }
 
