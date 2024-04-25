@@ -44,4 +44,15 @@ public class Test_Music_Shift : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
 
+    public void Play_Scene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+    }
+
+    public void Doctor_Scene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+        soundManager_get.Talk_Game1();
+    }
+
 }
