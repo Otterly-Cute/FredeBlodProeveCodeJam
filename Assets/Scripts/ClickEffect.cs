@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class ClickEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] ParticleSystem particle;
+
+    ParticleSystem.EmitParams emitSettings;
+
     void Start()
     {
-        
+        emitSettings = new ParticleSystem.EmitParams();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+       if(Input.GetMouseButtonDown(0))
+       {
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos.z = 0f;
+            emitSettings.position = pos;
+            particle.Emit(emitSettings, 1);
+       } 
     }
 }
