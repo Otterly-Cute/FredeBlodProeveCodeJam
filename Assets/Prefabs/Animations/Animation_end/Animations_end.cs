@@ -6,13 +6,20 @@ public class Animations_end : MonoBehaviour
 {
     public Animator animator;
     SoundManager soundManager_get;
-
+    public GameObject Appear_Button_THEEND;
     void Start()
     {
         soundManager_get = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         animator = GetComponent<Animator>();
         StartCoroutine(Delay());
         soundManager_get.playSFX("AudioClip_end");
+        StartCoroutine(StoryDelay_2());
+    }
+
+    private IEnumerator StoryDelay_2()
+    {
+        yield return new WaitForSeconds(14);
+        Appear_Button_THEEND.gameObject.SetActive(true);
     }
 
     private IEnumerator Delay()
