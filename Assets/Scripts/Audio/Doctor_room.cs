@@ -15,7 +15,7 @@ public class Doctor_room : MonoBehaviour
 
     private IEnumerator StoryDelay_2()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(28);
         Debug.Log("huhu");
         Appear_Button_YES.gameObject.SetActive(true);
         Appear_Button_NO.gameObject.SetActive(true);
