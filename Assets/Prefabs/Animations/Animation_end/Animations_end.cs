@@ -5,12 +5,14 @@ using UnityEngine;
 public class Animations_end : MonoBehaviour
 {
     public Animator animator;
-    Doctor_room Starter;
+    SoundManager soundManager_get;
 
     void Start()
     {
+        soundManager_get = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         animator = GetComponent<Animator>();
         StartCoroutine(Delay());
+        //soundManager_get.playSFX("AudioClip_1_Intro1");
     }
 
     private IEnumerator Delay()
@@ -27,7 +29,7 @@ public class Animations_end : MonoBehaviour
 
     private IEnumerator Delay_2()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         Shifter_2();
     }
 
@@ -39,7 +41,7 @@ public class Animations_end : MonoBehaviour
 
     private IEnumerator Delay_3()
     {
-        yield return new WaitForSeconds(6.4f);
+        yield return new WaitForSeconds(3f);
         Shifter_3();
     }
 

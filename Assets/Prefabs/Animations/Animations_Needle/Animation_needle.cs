@@ -5,16 +5,19 @@ using UnityEngine;
 public class Animation_needle : MonoBehaviour
 {
     public Animator animator;
+    SoundManager soundManager_get;
 
     void Start()
     {
+        soundManager_get = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         animator = GetComponent<Animator>();
         StartCoroutine(Delay());
+        //soundManager_get.playSFX("AudioClip_1_Intro1");
     }
 
     private IEnumerator Delay()
     {
-        yield return new WaitForSeconds(4.9f);
+        yield return new WaitForSeconds(2.5f);
         Shifter();
     }
 
@@ -26,7 +29,7 @@ public class Animation_needle : MonoBehaviour
 
     private IEnumerator Delay_2()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(7.5f);
         Shifter_2();
     }
 
