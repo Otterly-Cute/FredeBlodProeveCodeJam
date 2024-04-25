@@ -29,7 +29,7 @@ public class BlowOMeter : MonoBehaviour
             slider.value = countUp++;
         }
 
-        if (slider.value == 20)
+        if (slider.value == 20 && button.activeSelf == false)
         {
             button.SetActive(true);
             soundManager.playSFX("puste2");
