@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/ArmCloseUp 2.unity
     guid: f671f3fccfcab420fb105c0a4d277160
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/ArmCloseUp 3.unity
+    guid: 739f79787a1db4fb89dc0d152e433cbd
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
@@ -50,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/Puste.unity
     guid: f7c8a018924ef7445930680b79160bc3
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Mobile_scene_prick.unity
+    guid: 9fe0b6e5e492ddd40b9b1c3e2376b3ed
   - enabled: 1
     path: Assets/Scenes/GameScenes/Slut.unity
     guid: 7839be1558920de43941d28e1425e9f0

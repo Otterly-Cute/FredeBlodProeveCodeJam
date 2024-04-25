@@ -1099,6 +1099,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 251419bd057730541861a188af6638cc, type: 3}
   - name: plaster
     clip: {fileID: 8300000, guid: c69c5fdc91da14a44a2272814ed85b9b, type: 3}
+  - name: elastik2
+    clip: {fileID: 8300000, guid: ff8d657cacab04841ab5fc01d2385ee4, type: 3}
+  - name: elastik1
+    clip: {fileID: 8300000, guid: 6fa9335f7a5364047941e623bc80dd19, type: 3}
   musicsource: {fileID: 917981468}
   sfxsource: {fileID: 474856375}
 --- !u!4 &988538925

@@ -12,12 +12,12 @@ public class Animations_end : MonoBehaviour
         soundManager_get = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         animator = GetComponent<Animator>();
         StartCoroutine(Delay());
-        //soundManager_get.playSFX("AudioClip_1_Intro1");
+        soundManager_get.playSFX("AudioClip_end");
     }
 
     private IEnumerator Delay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         Shifter();
     }
 

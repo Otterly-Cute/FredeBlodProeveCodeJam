@@ -55,7 +55,6 @@ public class Test_Music_Shift : MonoBehaviour
     public void Doctor_Scene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
-        soundManager_get.playSFX("AudioClip_2_Doctor");
     }
 
     public void Trylleplaster_off()
@@ -68,6 +67,18 @@ public class Test_Music_Shift : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(7);
         soundManager_get.playSFX("AudioClip_4_ElastikFind");
+    }
+
+    public void Nexter()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(9);
+        
+    }
+
+    public void To_Home()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+
     }
 
     public void Elastik_found()

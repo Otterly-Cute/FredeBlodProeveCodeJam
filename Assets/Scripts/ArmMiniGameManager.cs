@@ -27,7 +27,7 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
     {
         soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         if (SceneManager.GetActiveScene().name == "ArmCloseUp1") {
-            soundManager.playSFX("AudioClip_5_Elastik_arm");
+            soundManager.playSFX("elastik1");
             return;
         }
 
