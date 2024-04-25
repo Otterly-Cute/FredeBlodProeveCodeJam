@@ -116,6 +116,7 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 
     private void ArmEventFour()
     {
+        soundManager.playSFX("needlegone");
         Needle.SetActive(false);
         Sprit.SetActive(false);
         foreach (var plaster in Plasters) {
@@ -126,6 +127,7 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 
     private void ArmEventFive(GameObject gameObject)
     {
+        soundManager.playSFX("plaster");
         Needle.SetActive(false);
         BloodVein.SetActive(false);
         TightBand.SetActive(false);

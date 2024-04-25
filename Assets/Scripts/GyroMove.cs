@@ -20,7 +20,7 @@ public class GyroMove : MonoBehaviour
     void Start()
     {
         soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
-        soundManager.playSFX("");
+        soundManager.playSFX("blod");
     }
 
     // Update is called once per frame
@@ -40,6 +40,7 @@ public class GyroMove : MonoBehaviour
     {
         if (collision.gameObject.name == "Collider")
         {
+            soundManager.playSFX("blod2");
             button.SetActive(true);
         }
     }
