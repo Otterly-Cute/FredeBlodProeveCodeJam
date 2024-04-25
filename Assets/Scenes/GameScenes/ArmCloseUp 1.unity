@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: NeedleSnap
+  VFX: {fileID: 0}
   GameManager: {fileID: 1150323084}
 --- !u!61 &111492133
 BoxCollider2D:
@@ -1238,6 +1239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: BandSnap
+  VFX: {fileID: 0}
   GameManager: {fileID: 1150323084}
 --- !u!1 &1468857687
 GameObject:
@@ -1547,6 +1549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: BandaidSnap
+  VFX: {fileID: 0}
   GameManager: {fileID: 1150323084}
 --- !u!61 &1583954922
 BoxCollider2D:
@@ -1829,6 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: SpritSnap
+  VFX: {fileID: 0}
   GameManager: {fileID: 1150323084}
 --- !u!61 &1635613190
 BoxCollider2D:
@@ -1974,6 +1978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: BandaidSnap
+  VFX: {fileID: 0}
   GameManager: {fileID: 1150323084}
 --- !u!61 &1650985604
 BoxCollider2D:
@@ -2119,6 +2124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: BandaidSnap
+  VFX: {fileID: 0}
   GameManager: {fileID: 1150323084}
 --- !u!61 &1674445765
 BoxCollider2D:
@@ -2187,7 +2193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2231273450998437582, guid: f1cb476229a56463fbb571b1be71b709, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Bloddraabe
+      value: Puste
       objectReference: {fileID: 0}
     - target: {fileID: 7420687663285680576, guid: f1cb476229a56463fbb571b1be71b709, type: 3}
       propertyPath: m_Name
@@ -2459,6 +2465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: BandaidSnap
+  VFX: {fileID: 0}
   GameManager: {fileID: 1150323084}
 --- !u!61 &1904365634
 BoxCollider2D:

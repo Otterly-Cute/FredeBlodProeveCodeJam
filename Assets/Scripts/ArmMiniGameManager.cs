@@ -47,7 +47,7 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
     private IEnumerator DelayedArmEventThree()
     {
         yield return new WaitForSeconds(1);
-        ArmEventThree();
+        arrowOne.SetActive(true);
     }
 
     private void MiniEventOne() => SpritSnapPoint.SetActive(false);
