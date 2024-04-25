@@ -902,7 +902,7 @@ MonoBehaviour:
   sfxSounds:
   - name: AudioClip_1_Intro1
     clip: {fileID: 8300000, guid: df37fe6ce2c254e4bb0e0b00bed63fc8, type: 3}
-  - name: AudioClip_2_Intro2
+  - name: AudioClip_2_Doctor
     clip: {fileID: 8300000, guid: 18fab3fc40138cb419b98a3e52274be0, type: 3}
   - name: AudioClip_3_Intro3
     clip: {fileID: 8300000, guid: 9edfbbbec2a50cf41b0255b5c739a450, type: 3}
@@ -965,6 +965,7 @@ MonoBehaviour:
   Appear_Button_Bricks: {fileID: 1673588204}
   Appear_Button_Tower: {fileID: 1741257486}
   Button_start: {fileID: 0}
+  start: 0
 --- !u!114 &2048142222
 MonoBehaviour:
   m_ObjectHideFlags: 0
