@@ -763,7 +763,7 @@ MonoBehaviour:
   - name: sprit
     clip: {fileID: 8300000, guid: 89020fab5a1ca3142be0bc229c305d0f, type: 3}
   - name: puste
-    clip: {fileID: 8300000, guid: 5df5b7db6df0f6a4aac304cb1311fa6f, type: 3}
+    clip: {fileID: 8300000, guid: 3a26ea3a4c870824aaa77d3b79105512, type: 3}
   - name: detherernal
     clip: {fileID: 8300000, guid: e702eaabe265fa24495d0a09163a89ed, type: 3}
   - name: nal2
@@ -778,6 +778,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 251419bd057730541861a188af6638cc, type: 3}
   - name: plaster
     clip: {fileID: 8300000, guid: c69c5fdc91da14a44a2272814ed85b9b, type: 3}
+  - name: puste2
+    clip: {fileID: 8300000, guid: 75f6ad6dbfb9ef242a4ff17629af002e, type: 3}
   musicsource: {fileID: 1997245743}
   sfxsource: {fileID: 1854888139}
 --- !u!4 &1198801688
