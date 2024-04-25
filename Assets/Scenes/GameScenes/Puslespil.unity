@@ -833,6 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap6
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1 &442499834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap9
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1 &761904482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap2
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1 &873104987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap5
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1 &878863791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,6 +1791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap3
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1 &923669459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,6 +2230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap1
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!61 &1430384361
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2748,6 +2754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap7
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1 &2010536942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,6 +2899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap8
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1 &2108161879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3036,6 +3044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPointName: Snap4
+  VFX: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

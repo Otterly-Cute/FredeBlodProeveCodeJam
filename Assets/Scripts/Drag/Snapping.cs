@@ -9,8 +9,9 @@ public class Snapping : Drag
     protected SnapManager snapManager;
     protected Transform snapPoint;
     protected bool isSnapped;
+    protected bool hasTriggeredVFX;
 
-    public ParticleSystem Succes;
+    public GameObject VFX;
 
     private void Start()
     {
@@ -32,7 +33,10 @@ public class Snapping : Drag
             {
                 // Snap the object to the specific snap point
                 transform.position = closestSnapPoint;
+                if(!isDragActive) 
+                {
                 isSnapped = true;
+                }
             }
             else if (snapPointName != snapPoint.name)
             {
@@ -48,6 +52,15 @@ public class Snapping : Drag
         {
             playVFX();
             hasTriggeredVFX = true;
+        }
+    }
+
+    protected void playVFX()
+    {
+        if (isSnapped && VFX != null)
+        {
+            Instantiate(VFX, transform.position, Quaternion.identity);
+            Debug.Log("VFX played");
         }
     }
 }
