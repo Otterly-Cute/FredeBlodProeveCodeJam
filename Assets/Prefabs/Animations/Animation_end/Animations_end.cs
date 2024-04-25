@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation_doctor : MonoBehaviour
+public class Animations_end : MonoBehaviour
 {
     public Animator animator;
     Doctor_room Starter;
@@ -55,5 +55,4 @@ public class Animation_doctor : MonoBehaviour
         animator.Play("Scene3_Doctor");
         //StartCoroutine(Delay_3());
     }
-
 }
