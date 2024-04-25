@@ -1142,6 +1142,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 8872799f11301f0439f2809837a6dabc, type: 3}
   - name: AudioClip_5_Elastik_found
     clip: {fileID: 8300000, guid: 710dbe64b6e3a234896e5aa7bc2d449e, type: 3}
+  - name: AudioClip_5_Elastik_found
+    clip: {fileID: 8300000, guid: 710dbe64b6e3a234896e5aa7bc2d449e, type: 3}
   musicsource: {fileID: 1129144063}
   sfxsource: {fileID: 1377394025}
 --- !u!4 &986581881
