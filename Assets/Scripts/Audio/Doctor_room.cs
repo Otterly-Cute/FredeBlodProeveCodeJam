@@ -6,11 +6,13 @@ public class Doctor_room : MonoBehaviour
 {
     public GameObject Appear_Button_YES;
     public GameObject Appear_Button_NO;
+    public bool Starting;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(StoryDelay_2());
+        Starting = true;
     }
 
     private IEnumerator StoryDelay_2()
