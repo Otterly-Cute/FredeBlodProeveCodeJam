@@ -9,6 +9,7 @@ public class GyroMove : MonoBehaviour
     public float speedY = 5f;
     public float dirX;
     public float dirY;
+    public GameObject button;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,5 +26,13 @@ public class GyroMove : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(dirX, dirY);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Collider")
+        {
+            button.SetActive(true);
+        }
     }
 }
