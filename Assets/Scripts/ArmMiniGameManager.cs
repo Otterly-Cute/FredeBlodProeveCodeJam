@@ -38,6 +38,9 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
                     MiniEventTwo();
                     StartCoroutine(DelayedArmEventFour());
                     break;
+                case "NeedleTwo":
+                    ArmEventFour();
+                    break;
                 default:
                     ArmEventFive(gameObject);
                     break;
@@ -88,7 +91,7 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
 
     private void ArmEventFour()
     {
-        NeedleSnapPoint.SetActive(false);
+        Needle.SetActive(false);
         Sprit.SetActive(false);
         foreach (var plaster in Plasters) {
             plaster.SetActive(true);
@@ -101,12 +104,13 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
         Needle.SetActive(false);
         BloodVein.SetActive(false);
         TightBand.SetActive(false);
+        gameObject.tag = "Untagged";
         foreach (var plaster in Plasters) {
             if (plaster != gameObject) {
                 plaster.SetActive(false);
             }
         }
         Debug.Log("ArmEventFive");
-        // arrow.SetActive(true);
+        arrowOne.SetActive(true);
     }
 }
