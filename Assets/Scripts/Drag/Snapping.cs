@@ -6,8 +6,9 @@ public class Snapping : Drag
 {
     public string snapPointName; // Name of the specific snap point
 
-    private SnapManager snapManager;
-    private Transform snapPoint;
+    protected SnapManager snapManager;
+    protected Transform snapPoint;
+    protected bool isSnapped;
 
     private void Start()
     {
@@ -18,8 +19,9 @@ public class Snapping : Drag
         snapPoint = snapManager.GetSnapPointByName(snapPointName);
     }
 
-    new private void Update()
+     new protected void Update()
     {
+        base.Update();
         // Check if the object is close to the specific snap point
         if (snapManager != null && snapPoint != null)
         {
@@ -28,6 +30,15 @@ public class Snapping : Drag
             {
                 // Snap the object to the specific snap point
                 transform.position = closestSnapPoint;
+                isSnapped = true;
+            }
+            else if (snapPointName != snapPoint.name)
+            {
+                transform.position = lastKnowPosition;
+            }
+            else
+            {
+                isSnapped = false;
             }
         }
     }
