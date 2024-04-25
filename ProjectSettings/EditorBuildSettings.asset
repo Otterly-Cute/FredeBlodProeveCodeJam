@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GameScenes/Puslespil.unity
     guid: e4bc74fd10ba7b94dae9d368fe6ea197
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameScenes/Puste.unity
     guid: f7c8a018924ef7445930680b79160bc3
   - enabled: 0
@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/Scenes/GameScenes/Ventev\xE6relse.unity"
     guid: ec63665fb9902d541bb6a9e38a7c55b1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScenes/ArmCloseUp.unity
     guid: 0007f47ac6ecff6469af3f85640e9efe
   m_configObjects: {}
