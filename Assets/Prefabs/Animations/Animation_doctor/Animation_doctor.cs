@@ -5,21 +5,18 @@ using UnityEngine;
 public class Animation_doctor : MonoBehaviour
 {
     public Animator animator;
-    Doctor_room Starter;
+    SoundManager soundManager_get;
 
     void Start()
     {
+        soundManager_get = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         animator = GetComponent<Animator>();
-        //Starter = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Doctor_room>();
+        soundManager_get.playSFX("AudioClip_2_Doctor");
     }
 
     private void Update()
     {
         StartCoroutine(Delay());
-        //if (Starter.Starting == true)
-        // {
-        // StartCoroutine(Delay());
-        // }
     }
     private IEnumerator Delay()
     {
