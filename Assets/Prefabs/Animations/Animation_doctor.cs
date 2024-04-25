@@ -46,7 +46,7 @@ public class Animation_doctor : MonoBehaviour
 
     private IEnumerator Delay_3()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6.4f);
         Shifter_3();
     }
 
