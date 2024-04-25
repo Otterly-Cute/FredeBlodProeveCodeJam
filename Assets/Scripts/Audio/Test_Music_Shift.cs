@@ -5,7 +5,9 @@ using UnityEngine;
 public class Test_Music_Shift : MonoBehaviour
 {
     SoundManager soundManager_get;
-    public GameObject Appear_Button;
+    public GameObject Appear_Button_puzzle;
+    public GameObject Appear_Button_Bricks;
+    public GameObject Appear_Button_Tower;
     public GameObject Button_start;
     private void Start()
     {
@@ -21,24 +23,25 @@ public class Test_Music_Shift : MonoBehaviour
 
     private IEnumerator storyDelay()
     {
-        yield return new WaitForSeconds(25);
-        Appear_Button.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        Appear_Button_puzzle.gameObject.SetActive(true);
+        Appear_Button_Bricks.gameObject.SetActive(true);
+        Appear_Button_Tower.gameObject.SetActive(true);
     }
 
-    public void front()
+    public void Puzzle_Scene()
     {
-        soundManager_get.sfxsource.Stop();
-        //UnityEngine.SceneManagement.SceneManager.LoadScene();
-        //soundManager_get.Talk_2();
-
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 
-    public void Back()
+    public void Bricks_Scene()
     {
-        soundManager_get.sfxsource.Stop();
-        //UnityEngine.SceneManagement.SceneManager.LoadScene();
-        //soundManager_get.Talk_1();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
 
+    public void Tower_Scene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
 
 }
