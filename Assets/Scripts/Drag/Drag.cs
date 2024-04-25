@@ -54,7 +54,7 @@ public class Drag : MonoBehaviour
     {
         isDragActive = true;
         lastKnowPosition = draggableObject.transform.position;
-        Debug.Log("position stored: " + lastKnowPosition);
+       
     }
 
     protected void DragObject()
