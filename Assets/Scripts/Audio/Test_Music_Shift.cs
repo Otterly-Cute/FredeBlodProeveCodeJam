@@ -55,4 +55,28 @@ public class Test_Music_Shift : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
         soundManager_get.Talk_Game1();
     }
+
+    public void Trylleplaster_off()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+        soundManager_get.Plaster_off();
+    }
+
+    public void Find_Object_Scene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+        soundManager_get.Find_elastik();
+    }
+
+    public void Elastik_found()
+    {
+        soundManager_get.Click_elastik();
+        StartCoroutine(storyDelay_Arm());
+    }
+
+    private IEnumerator storyDelay_Arm()
+    {
+        yield return new WaitForSeconds(7);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+    }
 }
