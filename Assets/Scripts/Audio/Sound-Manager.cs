@@ -56,6 +56,12 @@ public class SoundManager : MonoBehaviour
 
     }
 
+    public void Ending()
+    {
+        playSFX("AudioClip_10_Ending");
+
+    }
+
 
 
     public void PlayMusic(string name)

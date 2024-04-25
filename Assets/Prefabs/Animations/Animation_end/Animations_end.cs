@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation_doctor : MonoBehaviour
+public class Animations_end : MonoBehaviour
 {
     public Animator animator;
     Doctor_room Starter;
@@ -10,16 +10,15 @@ public class Animation_doctor : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        //Starter = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Doctor_room>();
+        Starter = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Doctor_room>();
     }
 
     private void Update()
     {
-        StartCoroutine(Delay());
-        //if (Starter.Starting == true)
-        // {
-        // StartCoroutine(Delay());
-        // }
+        if (Starter.Starting == true)
+        {
+            StartCoroutine(Delay());
+        }
     }
     private IEnumerator Delay()
     {
@@ -56,5 +55,4 @@ public class Animation_doctor : MonoBehaviour
         animator.Play("Scene3_Doctor");
         //StartCoroutine(Delay_3());
     }
-
 }
