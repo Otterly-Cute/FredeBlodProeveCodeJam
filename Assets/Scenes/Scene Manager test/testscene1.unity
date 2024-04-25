@@ -241,7 +241,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2092488729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167366916
@@ -336,7 +337,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: testscene2
+          m_StringArgument: laegerum
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1167366919
@@ -1005,7 +1006,7 @@ GameObject:
   - component: {fileID: 2092488727}
   - component: {fileID: 2092488726}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Transition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1088,7 +1089,7 @@ RectTransform:
   m_Children:
   - {fileID: 1167366917}
   - {fileID: 1819139010}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 381057280}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1101,5 +1102,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 381057280}
   - {fileID: 1758685113}
-  - {fileID: 2092488729}
   - {fileID: 2023707630}
