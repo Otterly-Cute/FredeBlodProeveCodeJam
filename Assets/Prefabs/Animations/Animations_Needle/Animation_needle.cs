@@ -5,21 +5,13 @@ using UnityEngine;
 public class Animation_needle : MonoBehaviour
 {
     public Animator animator;
-    Test_Music_Shift Starter;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        Starter = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Test_Music_Shift>();
+        StartCoroutine(Delay());
     }
 
-    private void Update()
-    {
-        if (Starter.start == true)
-        {
-            StartCoroutine(Delay());
-        }
-    }
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(4.9f);
