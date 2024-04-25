@@ -8,6 +8,7 @@ public class Drag : MonoBehaviour
     protected Vector2 screenPosition;
     protected Vector3 worldPosition;
     protected GameObject draggableObject; // Track the currently draggable object
+    protected Vector2 lastKnowPosition;
 
    protected void Update()
     {
@@ -52,6 +53,8 @@ public class Drag : MonoBehaviour
    protected void InitDrag()
     {
         isDragActive = true;
+        lastKnowPosition = draggableObject.transform.position;
+        Debug.Log("position stored: " + lastKnowPosition);
     }
 
     protected void DragObject()

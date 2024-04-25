@@ -34,9 +34,28 @@ public class SoundManager : MonoBehaviour
 
     public void Talk_Game1()
     {
-        playSFX("AudioClip_2_Intro2");
+        playSFX("AudioClip_2_Doctor");
 
     }
+
+    public void Plaster_off()
+    {
+        playSFX("AudioClip_3_PlasterOff");
+
+    }
+
+    public void Find_elastik()
+    {
+        playSFX("AudioClip_4_ElastikFind");
+
+    }
+
+    public void Click_elastik()
+    {
+        playSFX("AudioClip_5_Elastik_found");
+
+    }
+
 
 
     public void PlayMusic(string name)

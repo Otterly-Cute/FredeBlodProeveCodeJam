@@ -32,6 +32,10 @@ public class Snapping : Drag
                 transform.position = closestSnapPoint;
                 isSnapped = true;
             }
+            else if (snapPointName != snapPoint.name)
+            {
+                transform.position = lastKnowPosition;
+            }
             else
             {
                 isSnapped = false;
