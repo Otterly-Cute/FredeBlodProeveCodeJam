@@ -32,16 +32,10 @@ public class ArmMiniGameManager : MonoBehaviour, ITriggerable
         }
 
         if (SceneManager.GetActiveScene().name == "ArmCloseUp 2") {
-            soundManager.playSFX("detherernal");
-            StartCoroutine(AudioOne());
+            soundManager.playSFX("nal2");
+            
             return;
         }
-    }
-
-    public IEnumerator AudioOne()
-    {
-        yield return new WaitForSeconds(4.25f);
-        soundManager.playSFX("nal2");
     }
 
     public void TriggerEvent(GameObject gameObject)
