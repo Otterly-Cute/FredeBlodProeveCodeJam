@@ -9,6 +9,7 @@ public class Test_Music_Shift : MonoBehaviour
     public GameObject Appear_Button_Bricks;
     public GameObject Appear_Button_Tower;
     public GameObject Button_start;
+
     private void Start()
     {
         soundManager_get = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
@@ -18,12 +19,12 @@ public class Test_Music_Shift : MonoBehaviour
     {
         StartCoroutine(storyDelay());
         soundManager_get.Talk_Intro();
-        Destroy(Button_start); 
+        Destroy(Button_start);
     }
 
     private IEnumerator storyDelay()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(25);
         Appear_Button_puzzle.gameObject.SetActive(true);
         Appear_Button_Bricks.gameObject.SetActive(true);
         Appear_Button_Tower.gameObject.SetActive(true);
@@ -54,5 +55,4 @@ public class Test_Music_Shift : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
         soundManager_get.Talk_Game1();
     }
-
 }
