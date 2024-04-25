@@ -23,13 +23,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GameScenes/laegerum.unity
     guid: 674d504430865e346be006c901199bd0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScenes/Trylle_p_af.unity
     guid: c93baa58b4774f642bfdc3ef7c396da2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScenes/FindeSpil.unity
     guid: 1ecf5133431896b4eb035824a910351e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScenes/ArmCloseUp.unity
     guid: 0007f47ac6ecff6469af3f85640e9efe
   - enabled: 0

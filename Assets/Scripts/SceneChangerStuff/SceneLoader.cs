@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Unity.UI;
 using UnityEngine.UI;
 
 // https://www.youtube.com/watch?v=YMj2qPq9CP8
