@@ -66,7 +66,7 @@ public class Test_Music_Shift : MonoBehaviour
 
     public void Find_Object_Scene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(8);
         soundManager_get.Find_elastik();
     }
 
