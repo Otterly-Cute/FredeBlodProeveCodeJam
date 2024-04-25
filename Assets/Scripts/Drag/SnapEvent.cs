@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SnapEvent : Snapping
 {
-    private Eventmanager eventmanager;
+    private ITriggerable triggerable;
     private bool hasTriggeredEvent = false;
 
     private void Awake()
     {
-        eventmanager = FindObjectOfType<Eventmanager>();
-        if (eventmanager == null)
-        {
+        triggerable = GetComponent<ITriggerable>();
+        if (triggerable == null) {
             Debug.LogError("No Eventmanager found in the scene");
         }
     }
@@ -21,7 +20,7 @@ public class SnapEvent : Snapping
         base.Update();
         if (isSnapped && !hasTriggeredEvent)
         {
-            eventmanager.TriggerEvent();
+            triggerable.TriggerEvent(this.gameObject);
             hasTriggeredEvent = true;
         }
     }

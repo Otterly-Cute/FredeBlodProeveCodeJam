@@ -5,7 +5,7 @@ using UnityEngine;
 public class Eventmanager : MonoBehaviour
 {
    public void TriggerEvent()
-    {
-       Debug.Log("Event Triggered");
-    }
+   {
+      Debug.Log("Event Triggered");
+   }
 }

@@ -8,6 +8,7 @@ TagManager:
   - SnapPoint
   - AudioManager
   - Appear_Button
+  - Canvas
   layers:
   - Default
   - TransparentFX

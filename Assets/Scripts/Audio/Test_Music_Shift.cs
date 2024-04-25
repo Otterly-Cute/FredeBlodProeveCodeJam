@@ -9,6 +9,7 @@ public class Test_Music_Shift : MonoBehaviour
     public GameObject Appear_Button_Bricks;
     public GameObject Appear_Button_Tower;
     public GameObject Button_start;
+    public bool start = false;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class Test_Music_Shift : MonoBehaviour
 
     public void Startbutton_Destroy()
     {
+        start = true;
         StartCoroutine(storyDelay());
         soundManager_get.Talk_Intro();
         Destroy(Button_start);
