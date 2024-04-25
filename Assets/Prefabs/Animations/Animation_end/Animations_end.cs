@@ -28,7 +28,7 @@ public class Animations_end : MonoBehaviour
 
     private void Shifter()
     {
-        animator.Play("Scene1_Doctor");
+        animator.Play("Scene_1TransEnd");
         StartCoroutine(Delay_2());
     }
 
@@ -40,7 +40,7 @@ public class Animations_end : MonoBehaviour
 
     private void Shifter_2()
     {
-        animator.Play("Scene2_Doctor");
+        animator.Play("Scene_2TransEnd");
         StartCoroutine(Delay_3());
     }
 
@@ -52,7 +52,7 @@ public class Animations_end : MonoBehaviour
 
     private void Shifter_3()
     {
-        animator.Play("Scene3_Doctor");
+        animator.Play("Scene_3TransEnd");
         //StartCoroutine(Delay_3());
     }
 }
