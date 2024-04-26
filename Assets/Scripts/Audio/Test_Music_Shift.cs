@@ -81,6 +81,12 @@ public class Test_Music_Shift : MonoBehaviour
 
     }
 
+    public void fnaf()
+    {
+        soundManager_get.playSFX("Honk");
+
+    }
+
     public void Elastik_found()
     {
         soundManager_get.playSFX("AudioClip_5_Elastik_found");

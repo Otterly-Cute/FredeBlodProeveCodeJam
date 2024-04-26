@@ -7,6 +7,7 @@ public class Animations_end : MonoBehaviour
     public Animator animator;
     SoundManager soundManager_get;
     public GameObject Appear_Button_THEEND;
+    public GameObject Appear_Button_Fnaf;
     void Start()
     {
         soundManager_get = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
@@ -20,6 +21,7 @@ public class Animations_end : MonoBehaviour
     {
         yield return new WaitForSeconds(14);
         Appear_Button_THEEND.gameObject.SetActive(true);
+        Appear_Button_Fnaf.gameObject.SetActive(true);
     }
 
     private IEnumerator Delay()
@@ -55,5 +57,10 @@ public class Animations_end : MonoBehaviour
     private void Shifter_3()
     {
         animator.Play("Scene_3TransEnd");
+    }
+
+    private void fnaf()
+    {
+        soundManager_get.playSFX("AudioClip_end");
     }
 }
