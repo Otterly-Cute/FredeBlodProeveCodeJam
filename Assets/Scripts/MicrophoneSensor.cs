@@ -11,12 +11,14 @@ public class MicrophoneSensor : MonoBehaviour
     private bool isRecording = false;
 
     //https://www.youtube.com/watch?v=dzD0qP8viLw
-
     private AudioClip microphoneClip;
     public int sampleWindow = 64;
 
-
-
+    /// <summary>
+    /// https://www.youtube.com/watch?v=dzD0qP8viLw
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Start()
     {
         // Check if a microphone is available
@@ -38,31 +40,37 @@ public class MicrophoneSensor : MonoBehaviour
         // Wait for a short delay before proceeding
         yield return new WaitForSeconds(1);
 
-        // Start recording
-        // StartRecording();
-
         MicrophoneToAudioClip();
     }
 
-
     /// <summary>
     /// https://www.youtube.com/watch?v=dzD0qP8viLw
+    /// converts microphoneclip to audioclip
     /// </summary>
     public void MicrophoneToAudioClip()
     {
-
         int frequency = 44100; // Sample rate
         int seconds = 10; // Maximum recording duration
 
         microphoneClip = Microphone.Start(null, true, seconds, frequency);
-      
     }
 
-   public float GetDecibelFromMicrophone()
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// </summary>
+    /// <returns></returns>
+    public float GetDecibelFromMicrophone()
     {
         return GetDecibelFromAudioClip(Microphone.GetPosition(null), microphoneClip);
     }
 
+    /// <summary>
+    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+    /// checks the decible level from the audio clip
+    /// </summary>
+    /// <param name="clipPosition"></param>
+    /// <param name="clip"></param>
+    /// <returns></returns>
     public float GetDecibelFromAudioClip(int clipPosition, AudioClip clip)
     {
         int startPosition = clipPosition - sampleWindow;
@@ -82,18 +90,8 @@ public class MicrophoneSensor : MonoBehaviour
         }
 
         return totalDecibel / sampleWindow;
-
-
     }
-
-
-
-
-
-
-
    
-
     /// <summary>
     /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
     /// </summary>
@@ -117,6 +115,9 @@ public class MicrophoneSensor : MonoBehaviour
             yield return null;
         }
     }
+
+
+
 
     /*
     /// <summary>
