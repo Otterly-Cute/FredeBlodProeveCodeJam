@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Tutorial used to help create this script: https://www.youtube.com/watch?v=wpSm2O2LIRM
 public class GyroMove : MonoBehaviour
 {
     Rigidbody2D rb;

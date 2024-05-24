@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Drag">
-    <Position X="14" Y="2.5" Width="1.5" />
+    <Position X="15.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ASQAAAGAAAAAAAAAAAAAAAIAAAAAAgCAAAACAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Drag\Drag.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Animation_doctor">
-    <Position X="22.25" Y="10" Width="1.5" />
+    <Position X="22.25" Y="7.5" Width="1.5" />
     <AssociationLine Name="soundManager_get" Type="SoundManager" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.406" Y="10" />
-        <Point X="23.406" Y="2.875" />
+        <Point X="23" Y="7.5" />
+        <Point X="23" Y="2.875" />
         <Point X="26" Y="2.875" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="2.627" Y="-3.422" />
+        <Position X="3.032" Y="-2.53" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -28,16 +28,13 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Animations_end">
-    <Position X="24.25" Y="9.75" Width="1.5" />
+    <Position X="24.25" Y="7" Width="1.5" />
     <AssociationLine Name="soundManager_get" Type="SoundManager" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="25" Y="9.75" />
+        <Point X="25" Y="7" />
         <Point X="25" Y="2.875" />
         <Point X="26" Y="2.875" />
       </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-7.361" Y="-3.145" />
-      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>BAAEAAAAACAAAAAAAAAAgAIAAAAYAAMAAAAAAAEAQAA=</HashCode>
@@ -48,7 +45,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Animation_clock">
-    <Position X="26.5" Y="15" Width="1.5" />
+    <Position X="26.5" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAQAAAAAACAAAAAAAAAAgAAAAAAIgAMAAAAAAAEAAAA=</HashCode>
       <FileName>Assets\Prefabs\Animations\Animations_intro\Animation_clock.cs</FileName>
@@ -58,15 +55,15 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Animation_needle">
-    <Position X="20" Y="10.25" Width="1.5" />
+    <Position X="20.25" Y="7.25" Width="1.5" />
     <AssociationLine Name="soundManager_get" Type="SoundManager" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="21.156" Y="10.25" />
-        <Point X="21.156" Y="2.875" />
+        <Point X="21.406" Y="7.25" />
+        <Point X="21.406" Y="2.875" />
         <Point X="26" Y="2.875" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="5.078" Y="-3.325" />
+        <Position X="4.788" Y="-2.824" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -78,7 +75,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ArmMiniGameManager">
-    <Position X="16.5" Y="2.5" Width="2" />
+    <Position X="17.5" Y="2.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AIAABAAIQiAAAACAAwCIAAABAAQQAAgQAAAACQEAoEQ=</HashCode>
       <FileName>Assets\Scripts\ArmMiniGameManager.cs</FileName>
@@ -86,7 +83,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Doctor_room">
-    <Position X="19" Y="2.5" Width="1.5" />
+    <Position X="17.75" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAECAAAAAAAAAAABIAAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>Assets\Scripts\Audio\Doctor_room.cs</FileName>
@@ -100,13 +97,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Test_Music_Shift">
-    <Position X="26.5" Y="9" Width="1.5" />
+    <Position X="26.5" Y="7" Width="1.5" />
     <AssociationLine Name="soundManager_get" Type="SoundManager" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="27.25" Y="9" />
-        <Point X="27.25" Y="8.625" />
-        <Point X="27.25" Y="8.625" />
-        <Point X="27.25" Y="4.088" />
+        <Point X="26.812" Y="7" />
+        <Point X="26.812" Y="6.841" />
+        <Point X="26.812" Y="6.841" />
+        <Point X="26.812" Y="4.088" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -118,15 +115,15 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="BlowOMeter">
-    <Position X="28.75" Y="9.75" Width="1.5" />
+    <Position X="28.75" Y="7.25" Width="1.5" />
     <AssociationLine Name="soundManager" Type="SoundManager" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="29.5" Y="9.75" />
+        <Point X="29.5" Y="7.25" />
         <Point X="29.5" Y="2.875" />
         <Point X="27.5" Y="2.875" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.622" Y="-3.573" />
+        <Position X="-3.701" Y="-2.241" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -145,28 +142,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="collisionTrigger">
-    <Position X="34.5" Y="2.5" Width="1.5" />
+    <Position X="34.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\collisionTrigger.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Eventmanager">
-    <Position X="36.75" Y="2.5" Width="1.5" />
+    <Position X="17.75" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Drag\Eventmanager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SnapManager">
-    <Position X="39" Y="2.5" Width="1.5" />
+    <Position X="34.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Drag\SnapManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DragDrop">
-    <Position X="41.25" Y="2.5" Width="1.5" />
+    <Position X="34.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAEAAAAAAAIAAAAAABAEAACAAAAACAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\DragDrop.cs</FileName>
@@ -174,8 +171,13 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="GyroMove">
-    <Position X="31.25" Y="9.5" Width="1.5" />
-    <AssociationLine Name="soundManager" Type="SoundManager">
+    <Position X="31" Y="7" Width="1.5" />
+    <AssociationLine Name="soundManager" Type="SoundManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="31.594" Y="7" />
+        <Point X="31.594" Y="2.875" />
+        <Point X="27.5" Y="2.875" />
+      </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="2.138" Y="-3.163" />
       </MemberNameLabel>
@@ -189,21 +191,21 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="MicrophoneSensor">
-    <Position X="43.5" Y="2.5" Width="1.75" />
+    <Position X="36.75" Y="4.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAACAAAAAAAAAAYAgEAAQAGEAAAAAAgKAAEAg=</HashCode>
+      <HashCode>AAAAAEAAACAAAAAAAAAAQAgEAAQAGAAAAAAAAIAAEAg=</HashCode>
       <FileName>Assets\Scripts\MicrophoneSensor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SceneLoader">
-    <Position X="45.75" Y="2.5" Width="1.5" />
+    <Position X="36.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAIAAAAAAAAAACAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\SceneChangerStuff\SceneLoader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TylleplasterManager">
-    <Position X="47.75" Y="2.5" Width="1.75" />
+    <Position X="36.75" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Assets\Scripts\TylleplasterManager.cs</FileName>
@@ -211,14 +213,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Snapping">
-    <Position X="14" Y="6.25" Width="1.5" />
+    <Position X="15.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAQCAACEAEAAAAAAAAAQQAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Drag\Snapping.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SnapEvent">
-    <Position X="14" Y="10" Width="1.5" />
+    <Position X="15.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAEAAAAAAAAAAAAAAAAAAAACAAAAAAAABAAEA=</HashCode>
       <FileName>Assets\Scripts\Drag\SnapEvent.cs</FileName>
