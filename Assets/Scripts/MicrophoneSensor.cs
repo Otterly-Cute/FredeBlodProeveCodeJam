@@ -118,6 +118,7 @@ public class MicrophoneSensor : MonoBehaviour
         }
     }
 
+    /*
     /// <summary>
     /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
     /// Start recording audio (changed to public)
@@ -209,7 +210,7 @@ public class MicrophoneSensor : MonoBehaviour
         return 0f; // Return 0 if not recording or no recorded audio
     }
 
-
+    */
 
 
 
