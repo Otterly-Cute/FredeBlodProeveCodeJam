@@ -12,10 +12,10 @@ public class BlowOMeter : MonoBehaviour
 
     public GameObject button;
 
-    public int countUp;
+    public float countUp;
     public float minimumDecibel = 0.5f;
     private int maxValue = 20;
-    private int duration = 5;
+    private int duration = 4;
 
     private SoundManager soundManager;
 
@@ -32,7 +32,7 @@ public class BlowOMeter : MonoBehaviour
         countUp= 0;
         soundManager.playSFX("puste");
         yield return StartCoroutine(WaitForSound());
-        CheckDecibel();
+       // CheckDecibel();
     }
 
   /* IEnumerator Update()
@@ -73,7 +73,7 @@ public class BlowOMeter : MonoBehaviour
         yield return new WaitForSeconds(duration);
         print("FinishAudio");
 
-        
+        CheckDecibel();
     }
 
 
@@ -81,9 +81,10 @@ public class BlowOMeter : MonoBehaviour
     {
         while (slider.value < maxValue)
         {
+
             if (microphoneScript.GetDecibelFromMicrophone() > minimumDecibel)
             {
-                slider.value = countUp++;
+                slider.value = countUp+=0.1f;
             }
         }
 
