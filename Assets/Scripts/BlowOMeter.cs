@@ -18,14 +18,18 @@ public class BlowOMeter : MonoBehaviour
 
     private SoundManager soundManager;
 
-    private void Awake()
+    /*private void Awake()
     {
         soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         source = soundManager.sfxsource;
-    }
+    }*/
 
     public IEnumerator Start()
     {
+        soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
+        source = soundManager.sfxsource;
+
+
         soundManager.playSFX("puste");
         yield return StartCoroutine(WaitForSound());
     }
