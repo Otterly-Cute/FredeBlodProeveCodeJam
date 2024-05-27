@@ -38,15 +38,14 @@ public class MicrophoneSensor : MonoBehaviour
         // Wait for a short delay before proceeding
         yield return new WaitForSeconds(1);
 
-        // Start recording
-        // StartRecording();
-
+        // turns microphone clip into audioclip
         MicrophoneToAudioClip();
     }
 
 
     /// <summary>
     /// https://www.youtube.com/watch?v=dzD0qP8viLw
+    /// turns microphoneclip into audioclip
     /// </summary>
     public void MicrophoneToAudioClip()
     {
