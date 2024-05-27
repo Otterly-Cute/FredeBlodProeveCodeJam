@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class BlowOMeter : MonoBehaviour
 {
-    public Slider slider;
-    public MicrophoneSensor microphoneScript;
-    public GameObject button;
+    private Slider slider;
+    private MicrophoneSensor microphoneScript;
+    [SerializeField] GameObject button;
     private SoundManager soundManager;
 
-    public int countUp = 0;
-    public float minimumDecibel = 0.5f;
-    private int maxValue = 20;
+    private int countUp = 0;
+    private float minimumDecibel = 0.5f;
+    private int maxValue = 100;
     private int duration = 4;
 
     /// <summary>
@@ -22,6 +22,8 @@ public class BlowOMeter : MonoBehaviour
     public void Awake()
     {
         soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
+        slider = GetComponent<Slider>();
+        microphoneScript = GetComponent<MicrophoneSensor>();
     }
 
     /// <summary>
@@ -30,13 +32,16 @@ public class BlowOMeter : MonoBehaviour
     /// <returns></returns>
     IEnumerator Start()
     {
+        //make sure the slider values are set correct on start
+        slider.value = countUp;
+        slider.maxValue = maxValue;
+
         soundManager.playSFX("puste");
         yield return StartCoroutine(WaitForSound());
     }
 
     public void Update()
     {
-
         //checks if the decibel level is above the minimum level, if true we will add one to the slider value
         if (microphoneScript.GetDecibelFromMicrophone() > minimumDecibel)
         {
@@ -58,7 +63,6 @@ public class BlowOMeter : MonoBehaviour
     IEnumerator WaitForSound()
     {
         yield return new WaitForSeconds(duration);
-        print("FinishAudio");
+        Debug.Log("Finished Audio");
     }
-
 }

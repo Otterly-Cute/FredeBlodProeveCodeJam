@@ -5,10 +5,7 @@ using UnityEngine.UI;
 
 public class MicrophoneSensor : MonoBehaviour
 {
-    //https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
     private AudioSource audioSource;
-
-    //https://www.youtube.com/watch?v=dzD0qP8viLw
     private AudioClip microphoneClip;
     public int sampleWindow = 64;
 
@@ -49,7 +46,7 @@ public class MicrophoneSensor : MonoBehaviour
     }
 
      /// <summary>
-     /// using GetDecibelFromAudioClip and uses microphoneclip instead
+     /// using GetDecibelFromAudioClip to return decibel level from microphoneclip instead
      /// </summary>
      /// <returns></returns>
    public float GetDecibelFromMicrophone()
@@ -59,6 +56,7 @@ public class MicrophoneSensor : MonoBehaviour
 
     /// <summary>
     /// returns the decibel level from the audioclip
+    /// https://www.youtube.com/watch?v=dzD0qP8viLw
     /// </summary>
     /// <param name="clipPosition"></param>
     /// <param name="clip"></param>
