@@ -7,90 +7,47 @@ using UnityEngine.UI;
 public class BlowOMeter : MonoBehaviour
 {
     public Slider slider;
-   // public AudioSource source;
     public MicrophoneSensor microphoneScript;
-
     public GameObject button;
+    private SoundManager soundManager;
 
-    public float countUp;
+    public int countUp = 0;
     public float minimumDecibel = 0.5f;
     private int maxValue = 20;
     private int duration = 4;
 
-    private SoundManager soundManager;
-
     public void Awake()
     {
-       
-       // source = soundManager.sfxsource;
+        soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
     }
 
     IEnumerator Start()
     {
-
-        soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
-        countUp= 0;
         soundManager.playSFX("puste");
         yield return StartCoroutine(WaitForSound());
-       // CheckDecibel();
     }
 
-  /* IEnumerator Update()
+    public void Update()
     {
-        yield return StartCoroutine(WaitForSound());
-
         if (microphoneScript.GetDecibelFromMicrophone() > minimumDecibel)
         {
             slider.value = countUp++;
         }
 
-        //when value equals 20, arrow button and audio is played
-        if (slider.value == 20 && button.activeSelf == false)
+        
+
+        //when slider value equal max value and the button is not active, button is activated and audio is played
+        if (slider.value == maxValue && button.activeSelf == false)
         {
             button.SetActive(true);
             soundManager.playSFX("puste2");
         }
-    }*/
-
-    /// <summary>
-    /// https://gamedev.stackexchange.com/questions/134002/how-can-i-do-something-after-an-audio-has-finished
-    /// </summary>
-    /// <param name="Sound"></param>
-    /// <returns></returns>
-   /* IEnumerator WaitForSound()
-    {
-        while (source.isPlaying == false)
-        {
-            yield return null;
-        }
-
-        CheckDecibel();
-    }*/
-
+    }
 
     IEnumerator WaitForSound()
     {
         yield return new WaitForSeconds(duration);
         print("FinishAudio");
-
-        CheckDecibel();
     }
-
-
-    public void CheckDecibel()
-    {
-        while (slider.value < maxValue)
-        {
-
-            if (microphoneScript.GetDecibelFromMicrophone() > minimumDecibel)
-            {
-                slider.value = countUp+=0.1f;
-            }
-        }
-
-        button.SetActive(true);
-        soundManager.playSFX("puste2");
-    }
-
 
 }
