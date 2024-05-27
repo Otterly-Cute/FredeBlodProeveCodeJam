@@ -25,13 +25,13 @@ public class BlowOMeter : MonoBehaviour
        // source = soundManager.sfxsource;
     }
 
-    public void Start()
+    IEnumerator Start()
     {
 
         soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
         countUp= 0;
         soundManager.playSFX("puste");
-       // yield return StartCoroutine(WaitForSound());
+        yield return StartCoroutine(WaitForSound());
         CheckDecibel();
     }
 
