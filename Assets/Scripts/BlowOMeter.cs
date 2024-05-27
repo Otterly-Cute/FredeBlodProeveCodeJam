@@ -16,11 +16,18 @@ public class BlowOMeter : MonoBehaviour
     private int maxValue = 20;
     private int duration = 4;
 
+    /// <summary>
+    /// gets component on awake
+    /// </summary>
     public void Awake()
     {
         soundManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<SoundManager>();
     }
 
+    /// <summary>
+    /// plays audio and then waits for it to be over
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Start()
     {
         soundManager.playSFX("puste");
@@ -29,12 +36,12 @@ public class BlowOMeter : MonoBehaviour
 
     public void Update()
     {
+
+        //checks if the decibel level is above the minimum level, if true we will add one to the slider value
         if (microphoneScript.GetDecibelFromMicrophone() > minimumDecibel)
         {
             slider.value = countUp++;
         }
-
-        
 
         //when slider value equal max value and the button is not active, button is activated and audio is played
         if (slider.value == maxValue && button.activeSelf == false)
@@ -44,6 +51,10 @@ public class BlowOMeter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// waits for sound to be over
+    /// </summary>
+    /// <returns></returns>
     IEnumerator WaitForSound()
     {
         yield return new WaitForSeconds(duration);
