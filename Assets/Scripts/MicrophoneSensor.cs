@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class MicrophoneSensor : MonoBehaviour
 {
-    private AudioSource audioSource;
-    private AudioClip microphoneClip;
+    AudioSource audioSource;
+    AudioClip microphoneClip;
     public int sampleWindow = 64;
+    const int frequency = 44100; // Sample rate
+    const int seconds = 10; // Maximum recording duration
 
     /// <summary>
     /// Using IEnumerator because of coroutine
@@ -39,9 +41,6 @@ public class MicrophoneSensor : MonoBehaviour
     /// </summary>
     public void MicrophoneToAudioClip()
     {
-        int frequency = 44100; // Sample rate
-        int seconds = 10; // Maximum recording duration
-
         microphoneClip = Microphone.Start(null, true, seconds, frequency);
     }
 
@@ -63,6 +62,7 @@ public class MicrophoneSensor : MonoBehaviour
     /// <returns></returns>
     public float GetDecibelFromAudioClip(int clipPosition, AudioClip clip)
     {
+        //tjek video igen for clipposition + wavedata ting
         int startPosition = clipPosition - sampleWindow;
 
         if (startPosition < 0) //if startposition is negative we would get an error
