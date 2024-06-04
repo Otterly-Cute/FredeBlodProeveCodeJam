@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Generics : MonoBehaviour
 {
-
+/*
 
     //records,  den laver classen for en
     public sealed record GenericClass<T>(T Item);
@@ -40,10 +40,7 @@ public class Generics : MonoBehaviour
 
     
 
-
+    */
    
-    void Update()
-    {
-        
-    }
+    
 }
