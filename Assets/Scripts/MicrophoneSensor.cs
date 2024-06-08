@@ -1,11 +1,9 @@
 using UnityEngine;
 using UnityEngine.Android;
 using System.Collections;
-using UnityEngine.UI;
 
 public class MicrophoneSensor : MonoBehaviour
 {
-    AudioSource audioSource;
     AudioClip microphoneClip;
     public int sampleWindow = 64;
     const int frequency = 44100; // Sample rate
@@ -16,21 +14,23 @@ public class MicrophoneSensor : MonoBehaviour
     /// </summary>
     /// <returns></returns>
     IEnumerator Start()
-    {   
-        if (Microphone.devices.Length == 0) // Check if a microphone is available
+    {
+
+        if (Microphone.devices.Length == 0) // Checks if a microphone is available
         {
             Debug.LogError("No microphone detected.");
             yield break;
         }
 
-        RequestMicrophonePermission();// Request and check microphone permissions
-        yield return StartCoroutine(WaitForMicrophonePermission()); //wait for permission
+        //doesn't work as intended(if denied twice, no more requests will appear = you're stuck)
+        while (!Permission.HasUserAuthorizedPermission(Permission.Microphone)) //check for microphone access
+        {
+            // https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
+            Permission.RequestUserPermission(Permission.Microphone); //requests microphone access
+            yield return StartCoroutine(WaitForMicrophonePermission()); //wait for permission
+        }
 
         Debug.Log("Microphone access granted.");
-
-        audioSource = gameObject.AddComponent<AudioSource>();// Add an AudioSource component to this GameObject
-        
-        yield return new WaitForSeconds(1);// Wait for a short delay before proceeding
 
         MicrophoneToAudioClip(); // turns microphone clip into audioclip
     }
@@ -79,18 +79,6 @@ public class MicrophoneSensor : MonoBehaviour
         }
 
         return totalDecibel / sampleWindow;
-    }
-
-    /// <summary>
-    /// first time app is opened, microphone access is requested
-    /// https://forum.unity.com/threads/microphone-input-not-working-on-android.1430533/
-    /// </summary>
-    void RequestMicrophonePermission()
-    {
-        if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
-        {
-            Permission.RequestUserPermission(Permission.Microphone);
-        }
     }
 
     /// <summary>
