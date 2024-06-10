@@ -15,7 +15,6 @@ public class MicrophoneSensor : MonoBehaviour
     /// <returns></returns>
     IEnumerator Start()
     {
-
         if (Microphone.devices.Length == 0) // Checks if a microphone is available
         {
             Debug.LogError("No microphone detected.");
@@ -62,7 +61,6 @@ public class MicrophoneSensor : MonoBehaviour
     /// <returns></returns>
     public float GetDecibelFromAudioClip(int clipPosition, AudioClip clip)
     {
-        //tjek video igen for clipposition + wavedata ting
         int startPosition = clipPosition - sampleWindow;
 
         if (startPosition < 0) //if startposition is negative we would get an error
@@ -73,7 +71,7 @@ public class MicrophoneSensor : MonoBehaviour
 
         float totalDecibel = 0; //compute how loud it is
 
-        for (int i = 0; i < sampleWindow; i++)  //calculating the mean value (can be done other ways than using the mean)
+        for (int i = 0; i < sampleWindow; i++)  //calculating the mean value
         {
             totalDecibel += Mathf.Abs(waveData[1]);
         }

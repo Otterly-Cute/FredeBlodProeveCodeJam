@@ -17,7 +17,7 @@ public class BlowOMeter : MonoBehaviour
     private int duration = 4;
 
     /// <summary>
-    /// gets component on awake
+    /// gets components on awake
     /// </summary>
     public void Awake()
     {
@@ -37,7 +37,7 @@ public class BlowOMeter : MonoBehaviour
         slider.maxValue = maxValue;
 
         soundManager.playSFX("puste");
-        yield return StartCoroutine(WaitForSound());
+        yield return StartCoroutine(WaitForSound()); //makes sure our audioclip is done playing before starting to use the microphone
     }
 
     public void Update()

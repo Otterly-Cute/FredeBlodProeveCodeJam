@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Delegates : MonoBehaviour
 {
-
     //lampda funktion er en funktion uden et navn = delegates?
 
     public delegate void ThingyDoer(int item);
@@ -22,7 +21,6 @@ public class Delegates : MonoBehaviour
         DoStuffWithItems(list, x => Console.WriteLine(x));
     }
 
-
     static void DoStuffWithItems(List<int> items, Action<int> doer)
     {
         foreach (var item in items)
@@ -31,17 +29,5 @@ public class Delegates : MonoBehaviour
         }
     }
 
-
     //Action = den retunere ikke noget(void)
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
